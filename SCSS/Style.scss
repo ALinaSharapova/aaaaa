@@ -1,0 +1,123 @@
+@import "_nullStyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
+$text:'Manrope', sans-serif;
+$text-color: #FFFFFF;
+$button-color: rgba(255, 255, 255, 0.36);
+$button-color-hover: rgba(255, 255, 255, 0.524);
+
+.wrapper{
+    background: rgba(19, 18, 18, 1);
+    overflow: hidden;
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(757px, auto) 1fr minmax(107px, auto) / 1fr;
+}
+
+.header{
+    background-color: #0000000F;
+    backdrop-filter: blur(60px);
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 670px) minmax(auto, 570px) 1fr;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__logo{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 33px auto;
+    align-items: center;
+
+    font-family: $text;
+    color: $text-color;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+nav{
+    grid-column: 3 / 4;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+
+    a{
+        font-family: $text;
+        color: $text-color;
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+.firstpage{
+    background: url(../img/bg.png) center /cover no-repeat;
+    margin-bottom: 80px;
+}
+
+.firstpage__content{
+    align-items: center;
+    padding-left: 20px;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 659px) minmax(auto, 581px) 1fr;
+}
+
+.firstpage__content :first-child{
+    grid-column: 2 / 3;
+}
+
+.firstpage__photo{
+    margin-left: 25px;
+    grid-column: 3 / 4;
+}
+
+.text__text-title{
+    font-family: $text;
+    color: $text-color;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+    letter-spacing: -0.7px;
+    margin-bottom: 25px;
+}
+
+.text__text-content{
+    font-family: $text;
+    color: $text-color;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.7px;
+    margin-bottom: 45px;
+}
+
+.text__button{
+    background-color: $button-color;
+    border: none;
+    border-radius: 4px;
+    padding: 19px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 410px;
+        
+    font-family: $text;
+    color: $text-color;
+    font-weight: 600;
+    font-size: 18px;
+    &:hover{
+        background-color: $button-color-hover;
+    }
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img{
+        margin-right: 15px;
+    }
+ 
+
+}
+
+
